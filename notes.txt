@@ -1,0 +1,20 @@
+- Estruturar o projeto
+- Criar templates HTML
+- Interações no banco de dados com o (Node Express)
+- Criar a conexão com o banco de dados
+- Criar uma dependencia de desenvolvimdento, que ela só vai existir quando o projeto estiver em ambiente de desenvolvimento.
+--------
+npm init
+npm install
+npm install sqlite3@5.0.0
+npm install express express-handlebars body-parser sequelize sqlite3
+npm install -D nodemon 
+--------
+sequelize:
+é usado para fazer a abstração do banco de dados, não é preciso fazer consultas e sim utilizar os métodos dessa biblioteca. Fazer INSERT, DELETE, UPDATE, SELECT de forma mais resumida e fácil por meio de objetos e métodos
+--------
+nodemon:
+Usando para que quando seja feita uma atualização no projeto, não for preciso reiniciar o servidor.
+Alterar o arquivo de "test" para "dev" no package.json e passar como valor "nodemon app.js"
+Executar o projeto com "npm run dev"
+--------

@@ -1,0 +1,5 @@
+_cacache/
+_logs/
+node_modules/
+_prebuilds/
+_update-notifier-last-checked
