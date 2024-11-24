@@ -1,0 +1,4 @@
+SQLite3
+Bank
+It is used in mobile applications to save data that needs to persist.
+It saves space on the server.

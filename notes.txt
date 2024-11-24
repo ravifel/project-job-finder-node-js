@@ -1,8 +1,8 @@
-- Estruturar o projeto
-- Criar templates HTML
-- Interações no banco de dados com o (Node Express)
-- Criar a conexão com o banco de dados
-- Criar uma dependencia de desenvolvimdento, que ela só vai existir quando o projeto estiver em ambiente de desenvolvimento.
+- Structure the project
+- Create HTML templates
+- Interactions with the database using (Node Express)
+- Create the connection to the database
+- Create a development dependency, which will only exist when the project is in the development environment.
 --------
 npm init
 npm install
@@ -11,10 +11,10 @@ npm install express express-handlebars body-parser sequelize sqlite3
 npm install -D nodemon 
 --------
 sequelize:
-é usado para fazer a abstração do banco de dados, não é preciso fazer consultas e sim utilizar os métodos dessa biblioteca. Fazer INSERT, DELETE, UPDATE, SELECT de forma mais resumida e fácil por meio de objetos e métodos
+It is used to abstract the database, there is no need to make queries and instead use the methods of this library. Perform 'INSERT', 'DELETE', 'UPDATE', SELECT in a more summarized and easy way through objects and methods
 --------
 nodemon:
-Usando para que quando seja feita uma atualização no projeto, não for preciso reiniciar o servidor.
-Alterar o arquivo de "test" para "dev" no package.json e passar como valor "nodemon app.js"
-Executar o projeto com "npm run dev"
+Using this so that when an update is made to the project, it is not necessary to restart the server.
+Change the file from "test" to "dev" in package.json and pass "nodemon app.js" as the value
+Run the project with "npm run dev"
 --------
