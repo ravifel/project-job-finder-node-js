@@ -2,3 +2,13 @@ SQLite3
 Bank
 It is used in mobile applications to save data that needs to persist.
 It saves space on the server.
+
+    -> Install 'DB Browser for SQLite'
+It helps us visualize the database and tables in a more organized way. It is possible to have the entire data structure in a more visible way.
+It is possible to change the database, insert tables, insert/delete/update data.
+
+    # How will the data be inserted into the database?
+Queries will not be used for this.
+A 'model' will be created, which is the abstraction of the table itself. And then it will be inserted into the database via methods of an object.
+'sequelize' needs to know what each field of our table represents in our object (object = model - An object can have several 'models').
+Model: Job
