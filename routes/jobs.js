@@ -12,22 +12,22 @@ router.post('/add', (request, response) => {
     // Request body
     let {
         title,
-        description,
         salary,
         company,
         email,
-        new_job
+        new_job,
+        description
     } = request.body;
 
     // Insert data into the application
     // All parameters described in the model must be passed.
     Job.create({
         title,
-        description,
         salary,
         company,
         email,
-        new_job
+        new_job,
+        description
     }).then(() => response.redirect('/'))
         .catch(err => console.log(err));
 });
