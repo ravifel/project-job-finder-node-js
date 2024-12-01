@@ -1,5 +1,7 @@
 const express = require('express'); // call express for our project
+const exphbs = require('express-handlebars')
 const app = express(); // call express to create a server for the project
+const path = require('path');
 const db = require('./db/connection');
 const bodyParser = require('body-parser'); // In order to be able to retrieve the request body
 
@@ -12,6 +14,12 @@ app.listen(PORT, function () {
 
 // Declare that body-parsey will be used in 'Express'
 app.use(bodyParser.urlencoded({ extended: false }));
+
+// Handlebars
+// Html in handlebars format
+app.set('views', path.join(__dirname, 'views'));
+app.engine('handlebars', exphbs({ defaultLayout: 'main' })); // Part that is repeated most in the application. Main Application Layout File
+app.set('view engine', 'handlebars'); // Framework or Library that will be used to render the 'views'
 
 // db connection
 // Database connection, which will perform the test whenever the application is started or when there is a transaction in the database, we will need to go through this connection.
