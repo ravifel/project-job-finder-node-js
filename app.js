@@ -4,6 +4,7 @@ const app = express(); // call express to create a server for the project
 const path = require('path');
 const db = require('./db/connection');
 const bodyParser = require('body-parser'); // In order to be able to retrieve the request body
+const Job = require('./models/Job')
 
 const PORT = 3000; // start the server on a port
 
@@ -37,7 +38,16 @@ db
 
 // route main
 app.get('/', (require, response) => {
-    response.render('index');
+    Job.findAll({ // Call all 'jobs'
+        order: [
+            ['createdAt', 'DESC'] // Sort by creation date descending
+        ]
+    })
+        .then(jobs => {
+
+            response.render('index', { jobs }); // Render the 'view' with the 'jobs' inside it
+        })
+
 });
 
 // jobs routes
