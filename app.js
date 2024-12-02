@@ -17,9 +17,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // Handlebars
 // Html in handlebars format
-app.set('views', path.join(__dirname, 'views'));
-app.engine('handlebars', exphbs({ defaultLayout: 'main' })); // Part that is repeated most in the application. Main Application Layout File
+app.set('views', path.join(__dirname, 'views',));
+app.engine('handlebars', exphbs.engine({ defaultLayout: 'main' })); // Part that is repeated most in the application. Main Application Layout File
 app.set('view engine', 'handlebars'); // Framework or Library that will be used to render the 'views'
+
+// Static Folder
+app.use(express.static(path.join(__dirname, 'public')));
 
 // db connection
 // Database connection, which will perform the test whenever the application is started or when there is a transaction in the database, we will need to go through this connection.
@@ -34,7 +37,7 @@ db
 
 // route main
 app.get('/', (require, response) => {
-    response.send("It's working...");
+    response.render('index');
 });
 
 // jobs routes

@@ -1,0 +1,4 @@
+Handlebars
+Now '.handlebars' files will be created instead of 'html' files
+
+They will work in the same way as HTML works but will have the 'template engine' that will help to use the Backend data and also some special commands and tags that will facilitate development.

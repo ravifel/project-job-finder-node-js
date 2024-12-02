@@ -7,6 +7,11 @@ router.get('/test', (require, response) => {
     response.send("Testing...");
 });
 
+// Search for Jobs
+router.get('/add', (request, response) => {
+    response.render('add');
+})
+
 // Add a JOB via POST
 router.post('/add', (request, response) => {
     // Request body
@@ -28,7 +33,8 @@ router.post('/add', (request, response) => {
         email,
         new_job,
         description
-    }).then(() => response.redirect('/'))
+    })
+        .then(() => response.redirect('/'))
         .catch(err => console.log(err));
 });
 
