@@ -1,40 +1,39 @@
     <div id="add-form-container" class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="text-center">Divulgue a vaga preenchendo o formulário</h1>
+                <h1 class="text-center">Share the vacancy by filling out the form</h1>
             </div>
             <div id="form-box" class="col-md-12">
-                <h2>Preencha os dados da melhor forma possível para encontrar mais rápido seu dev!</h2>
+                <h2>Fill in the data in the best possible way to find your dev faster!</h2>
                 <form action="/jobs/add" method="POST">
                     <div class="form-group">
-                        <label for="title">Título da vaga:</label>
+                        <label for="title">Job title:</label>
                         <input type="text" class="form-control" id="title" name="title"
                             placeholder="Digite o título da vaga" required>
-                        <small id="titleHelp" class="form-text text-muted">O título é muito importante, seja claro e
-                            objetivo.</small>
+                        <small id="titleHelp" class="form-text text-muted">The title is very important, be clear and objective.</small>
                     </div>
                     <div class="form-group">
-                        <label for="description">Descrição da vaga:</label>
+                        <label for="description">Job Description:</label>
                         <textarea type="text" class="form-control" id="description" name="description"
                             placeholder="Descreva as atividades do desenvolvedor..." required></textarea>
                     </div>
                     <div class="form-group">
-                        <label for="company">Empresa contratante:</label>
+                        <label for="company">Contracting company:</label>
                         <input type="text" class="form-control" id="company" name="company"
                             placeholder="Digite a empresa que vai contratar" required>
                     </div>
                     <div class="form-group">
-                        <label for="email">E-mail para contato:</label>
+                        <label for="email">Contact email:</label>
                         <input type="email" class="form-control" id="email" name="email"
                             placeholder="Digite o e-mail para contato" required>
                     </div>
                     <div class="form-group">
-                        <label for="salary">Salário oferecido:</label>
+                        <label for="salary">Salary offered:</label>
                         <input type="text" class="form-control" id="salary" name="salary"
                             placeholder="Digite o Salário da vaga" required>
                     </div>
                     <input type="hidden" name="new_job" value="1">
-                    <button type="submit" class="btn btn-primary">Enviar</button>
+                    <button type="submit" class="btn btn-primary">Send</button>
                 </form>
             </div>
         </div>
