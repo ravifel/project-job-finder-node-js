@@ -228,6 +228,7 @@
   .back-link {
     border: 1px solid #F03E3E;
     padding: 5px 10px;
+    width: min-content;
     transition: .5s;
   }
   
